@@ -10,14 +10,14 @@ jobs:
         steps:
             - name: Checkout code
               uses: actions/checkout@v4
-              
+
             - name: Setup Python 3.13
               uses: actions/setup-python@v5
               with:
                 python-version: "3.13"
 
             - name: Install libraries and dependencies
-              run: pip install -r requirements.txt
+              run: pip install flake8
 
             - name: run linter
               run: flake8 app.py
